@@ -1,0 +1,26 @@
+{
+    "development": {
+      "username": "dev",
+      "password": "joA6DtRWpfTOoS31",
+      "database": "dev_pics",
+      "host": "192.168.10.10",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    },
+    "test": {
+      "username": "dev",
+      "password": "joA6DtRWpfTOoS31",
+      "database": "dev_pics",
+      "host": "192.168.10.10",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    },
+    "production": {
+      "username": "dev",
+      "password": "joA6DtRWpfTOoS31",
+      "database": "dev_pics",
+      "host": "192.168.10.10",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    }
+  }
