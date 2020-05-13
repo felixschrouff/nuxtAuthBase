@@ -15,11 +15,36 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/auth/login',
+            method: 'post',
+            propertyName: false
+          },
+          logout: {
+            url: '/auth/logout',
+            method: 'post'
+          },
+          user: {
+            url: '/auth/me',
+            method: 'get',
+            propertyName: false
+          }
+        },
+        tokenRequired: false,
+        tokenType: false
+      }
+    }
+  },
+  /*
   server: {
     port: 3000,
     host: 'localhost',
     instanceName: "API-Auth Nuxt"
-  },
+  },*/
   /*
   ** Customize the progress-bar color
   */
@@ -45,12 +70,15 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'http://localhost:3000/api',
+    credentials: true
   },
   /*
   ** Build configuration

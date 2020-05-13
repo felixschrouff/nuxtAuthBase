@@ -16,13 +16,13 @@ module.exports = function (app, passport){
     })
   );
 
-  app.use(
+ /* app.use(
     cors({
       origin: ['http://localhost:3000', 'https://picdb.scix.cc'],
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
       credentials: true
     })
-  );
+  );*/
 
   app.use(function(req, res, next) {
     res.locals.env = env;

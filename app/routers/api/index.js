@@ -1,8 +1,6 @@
 const routes = require('express').Router();
 
-routes.get('/', (req,res) => {
-    res.sendStatus(200)
-})
+//auth api
 routes.use('/auth', require('./auth'));
 
 

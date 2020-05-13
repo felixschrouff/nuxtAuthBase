@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <topnav />
     <div>
       <logo />
       <h1 class="title">
@@ -30,10 +31,13 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import topnav from '~/components/header.vue'
 
 export default {
+  middleware: ['auth'],
   components: {
-    Logo
+    Logo,
+    topnav
   }
 }
 </script>

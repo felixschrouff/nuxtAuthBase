@@ -19,5 +19,6 @@ module.exports = function(passport) {
             }
         });
     });
-    passport.use(local)
+
+    passport.use(local);
 }

@@ -86,6 +86,7 @@ exports.login = function(username,password,done){
       return done(null, false, { message: 'Incorrect password.' });
     }
     else {
+      console.log('welcome')
       return done(null, user, {message: "Welcome"});
     }
   }))
